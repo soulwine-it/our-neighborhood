@@ -28,9 +28,9 @@
 					class="nav-link dropdown-toggle" id="dropdown"
 					data-toggle="dropdown"> 회원관리 </a>
 					<div class="dropdown-menu" aria-labelledby="dropdown">
-						<a class="dropdown-item" href="#">로그인!</a> <a
-							class="dropdown-item" href="#">회원가입!</a> <a class="dropdown-item"
-							href="#">로그아웃!</a>
+						<a class="dropdown-item" href="userLogin.jsp">로그인!</a> <a
+							class="dropdown-item" href="userJoin.jsp">회원가입!</a> <a class="dropdown-item"
+							href="userLogout.jsp">로그아웃!</a>
 					</div></li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
@@ -66,20 +66,23 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<h5 class="card-title"> 좋아요&nbsp;<small>2017년 여름</small></h5>
-				<p class="card-text"> 둘리가 살아 숨쉬는거 같아요</p>
+				<h5 class="card-title">
+					좋아요&nbsp;<small>2017년 여름</small>
+				</h5>
+				<p class="card-text">둘리가 살아 숨쉬는거 같아요</p>
 				<div class="row">
 					<div class="col-9 text-left">
-						편의시설<span style="color:red;">5</span>
-						접근성<span style="color:red;">5</span>
-						구경거리<span style="color:red;">5</span>
-						<span style="color:green;">(추천: 15)</span>
+						편의시설<span style="color: red;">5</span> 접근성<span
+							style="color: red;">5</span> 구경거리<span style="color: red;">5</span>
+						<span style="color: green;">(추천: 15)</span>
 					</div>
 					<div class="col-3 text-right">
-						<a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?evalutionID=">추천</a>
-						<a onclick="return confirm('삭제하시겠습니까?')" href="./deleteAction.jsp?evalutionID=">삭제</a>
+						<a onclick="return confirm('추천하시겠습니까?')"
+							href="./likeAction.jsp?evalutionID=">추천</a> <a
+							onclick="return confirm('삭제하시겠습니까?')"
+							href="./deleteAction.jsp?evalutionID=">삭제</a>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -95,20 +98,23 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<h5 class="card-title"> 안경 저렴하게 잘 샀어요&nbsp;<small>2019년 여름</small></h5>
-				<p class="card-text"> 전자파 차단 렌즈랑 같이 맞췄는데 정말 저렴하게 주셔서 기분이 좋았어요</p>
+				<h5 class="card-title">
+					안경 저렴하게 잘 샀어요&nbsp;<small>2019년 여름</small>
+				</h5>
+				<p class="card-text">전자파 차단 렌즈랑 같이 맞췄는데 정말 저렴하게 주셔서 기분이 좋았어요</p>
 				<div class="row">
 					<div class="col-9 text-left">
-						편의시설<span style="color:red;">4</span>
-						접근성<span style="color:red;">5</span>
-						구경거리<span style="color:red;">3</span>
-						<span style="color:green;">(추천: 15)</span>
+						편의시설<span style="color: red;">4</span> 접근성<span
+							style="color: red;">5</span> 구경거리<span style="color: red;">3</span>
+						<span style="color: green;">(추천: 15)</span>
 					</div>
 					<div class="col-3 text-right">
-						<a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?evalutionID=">추천</a>
-						<a onclick="return confirm('삭제하시겠습니까?')" href="./deleteAction.jsp?evalutionID=">삭제</a>
+						<a onclick="return confirm('추천하시겠습니까?')"
+							href="./likeAction.jsp?evalutionID=">추천</a> <a
+							onclick="return confirm('삭제하시겠습니까?')"
+							href="./deleteAction.jsp?evalutionID=">삭제</a>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -124,20 +130,24 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<h5 class="card-title"> 아이 교육 프로그램이 많아요&nbsp;<small>2020년 봄</small></h5>
-				<p class="card-text"> 집에 있는 아이때문에 알아보았는데 아이들이 참여할 수 있는 실습 강의가 많아서 좋아요</p>
+				<h5 class="card-title">
+					아이 교육 프로그램이 많아요&nbsp;<small>2020년 봄</small>
+				</h5>
+				<p class="card-text">집에 있는 아이때문에 알아보았는데 아이들이 참여할 수 있는 실습 강의가 많아서
+					좋아요</p>
 				<div class="row">
 					<div class="col-9 text-left">
-						편의시설<span style="color:red;">5</span>
-						접근성<span style="color:red;">5</span>
-						구경거리<span style="color:red;">5</span>
-						<span style="color:green;">(추천: 15)</span>
+						편의시설<span style="color: red;">5</span> 접근성<span
+							style="color: red;">5</span> 구경거리<span style="color: red;">5</span>
+						<span style="color: green;">(추천: 15)</span>
 					</div>
 					<div class="col-3 text-right">
-						<a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?evalutionID=">추천</a>
-						<a onclick="return confirm('삭제하시겠습니까?')" href="./deleteAction.jsp?evalutionID=">삭제</a>
+						<a onclick="return confirm('추천하시겠습니까?')"
+							href="./likeAction.jsp?evalutionID=">추천</a> <a
+							onclick="return confirm('삭제하시겠습니까?')"
+							href="./deleteAction.jsp?evalutionID=">삭제</a>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -300,8 +310,7 @@
 		</div>
 	</div>
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #ffffff;">
-		Copyright &copy; 2020 똥글이 All right Reserved.
-	</footer>
+		Copyright &copy; 2020 똥글이 All right Reserved. </footer>
 
 
 	<!-- jquery javascript 추가 -->
