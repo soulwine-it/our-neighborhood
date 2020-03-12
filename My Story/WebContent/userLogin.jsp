@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.io.PrintWriter" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,24 @@
 <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
-	<nav class="navbar navbar-expend-lg navbar-light bg-light">
+<%
+	String userID = null;
+	//로그인한 상태라서 userID에 세션이 존재한다면
+	if(session.getAttribute("userID") != null) {
+		userID = (String)session.getAttribute("userID");
+	}
+	//로그인을 하지 않았다면
+	if(userID != null){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('로그인이 된 상태입니다..')");
+		script.println("location.href='index.jsp'");
+		script.println("</script>");
+		script.close();
+		return;
+	}	
+%>
+		<nav class="navbar navbar-expend-lg navbar-light bg-light">
 		<a class="navbar-brand" href="index.jsp">우리동네 이야기</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbar">
@@ -28,13 +46,23 @@
 					class="nav-link dropdown-toggle" id="dropdown"
 					data-toggle="dropdown"> 회원관리 </a>
 					<div class="dropdown-menu" aria-labelledby="dropdown">
-						<a class="dropdown-item" href="userLogin.jsp">로그인!</a> <a
-							class="dropdown-item" href="userJoin.jsp">회원가입!</a> <a class="dropdown-item"
-							href="userLogout.jsp">로그아웃!</a>
+					
+<%
+	if(userID == null){
+%>
+						<a class="dropdown-item" href="userLogin.jsp">로그인!</a> 
+						<a class="dropdown-item" href="userJoin.jsp">회원가입!</a> 
+<%
+	}else{ 
+%>
+						<a class="dropdown-item" href="userLogout.jsp">로그아웃!</a>
+<%
+	} 
+%>		
 					</div></li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
+			<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
+				<input type="text" name="search" class="form-control mr-sm-2" type="search"
 					placeholder="내용을 입력해 주세요." aria-label="Search">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
 			</form>

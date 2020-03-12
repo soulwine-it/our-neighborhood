@@ -69,18 +69,9 @@ public class UserDAO {
 			pstmt.setString(2, user.getUserPassword());
 			pstmt.setString(3, user.getUserEmail());
 			pstmt.setString(4, user.getUserEmailHash());
-			// 결과값
-//			rs= pstmt.executeQuery();
-//			
-//			if(rs.next()) {
-//				if(rs.getString(1).equals(userPassword)) {
-//					return 1; //로그인 성공
-//				}else {
-//					return 0; //비밀번호 틀림
-//				}
-//			}
+
 			return pstmt.executeUpdate(); // 성공시 1반환
-//			return -1; //아이디 없음
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

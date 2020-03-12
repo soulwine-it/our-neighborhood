@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="java.io.PrintWriter" %>
+	<%@ page import="java.io.PrintWriter" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,16 +21,16 @@
 	if(session.getAttribute("userID") != null) {
 		userID = (String)session.getAttribute("userID");
 	}
-	//로그인을 하지 않았다면
-	if(userID != null){
+	if(userID == null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('로그인 중입니다.')");
-		script.println("location.href='index.jsp'");
+		script.println("alert('로그인을 해주세요.')");
+		script.println("location.href='userLogin.jsp';");
 		script.println("</script>");
 		script.close();
 		return;
-	}	
+	}
+	
 %>
 		<nav class="navbar navbar-expend-lg navbar-light bg-light">
 		<a class="navbar-brand" href="index.jsp">우리동네 이야기</a>
@@ -69,21 +69,10 @@
 		</div>
 	</nav>
 	<section class="container mt-3" style="max-width: 560px;">
-		<form method="post" action="./userRegisterAction.jsp">
-			<div class="form-group">
-				<label>아이디</label>
-				<input type="text" name="userID" class="form-control">
-			</div>
-			<div class="form-group">
-				<label>비밀번호</label>
-				<input type="password" name="userPassword" class="form-control">
-			</div>
-			<div class="form-group">
-				<label>이메일</label>
-				<input type="email" name="userEmail" class="form-control">
-			</div>
-			<button type="submit" class="btn btn-primary">회원가입</button>	
-		</form>
+		<div class="alert alert-warning mt-4" role="alert">
+			이메일 주소 인증을 하셔야 이용이 가능합니다. 인증메일을 받지 못하셨나요?
+		</div>
+		<a href="emailSendAction.jsp" class="btn btn-primary">인증메일 다시 받기</a>
 	</section>
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #ffffff;">
 		Copyright &copy; 2020 똥글이 All right Reserved. </footer>

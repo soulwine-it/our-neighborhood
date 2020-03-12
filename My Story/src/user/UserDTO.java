@@ -1,11 +1,12 @@
 package user;
 
 public class UserDTO {
+
 	private String userID;
 	private String userPassword;
 	private String userEmail;
 	private String userEmailHash;
-	private String userEmailChecked;
+	private boolean userEmailChecked;
 	
 	public String getUserID() {
 		return userID;
@@ -31,20 +32,19 @@ public class UserDTO {
 	public void setUserEmailHash(String userEmailHash) {
 		this.userEmailHash = userEmailHash;
 	}
-	public String getUserEmailChecked() {
+	public boolean isUserEmailChecked() {
 		return userEmailChecked;
 	}
-	public void setUserEmailChecked(String userEmailChecked) {
+	public void setUserEmailChecked(boolean userEmailChecked) {
 		this.userEmailChecked = userEmailChecked;
 	}
-	//초기화 함수
+	
 	public UserDTO() {
 		
 	}
-	
 	public UserDTO(String userID, String userPassword, String userEmail, String userEmailHash,
-			String userEmailChecked) {
-		super();
+			boolean userEmailChecked) {
+		
 		this.userID = userID;
 		this.userPassword = userPassword;
 		this.userEmail = userEmail;
@@ -54,3 +54,4 @@ public class UserDTO {
 	
 	
 }
+
